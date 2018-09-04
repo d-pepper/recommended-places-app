@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiCallerService } from '../services/api-caller.service'
 
 @Component({
   selector: 'app-location-search-results',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationSearchResultsComponent implements OnInit {
 
-  constructor() { }
+  results: object;
+
+  constructor(public apiCallerService: ApiCallerService) { }
 
   ngOnInit() {
+    this.getResults();
+  }
+
+  getResults(): void {
+    this.apiCallerService.getFourSquareResults()
+      .subscribe(results => this.results = results);
   }
 
 }
