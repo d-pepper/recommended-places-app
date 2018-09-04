@@ -1,7 +1,7 @@
 <div>
   <label>Enter a place: 
-    <input placeholder="A restaurant I really like">
-    <button>Search</button>
+    <input [(ngModel)]="searchInput" placeholder="A restaurant I really like">
+    <button (click)="doSearch()">Search</button>
   </label>
 </div>
 

@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationSearchComponent implements OnInit {
 
+  searchInput: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  performSearch(){
+    //this.searchInputFromParent;
+  }
 }

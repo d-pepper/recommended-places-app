@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LocationSearchService } from '../services/location-search.service'
 import { Results } from '../models/results';
 
