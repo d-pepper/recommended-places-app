@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { Results } from '../models/results';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class LocationSearchService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getFourSquareResults(): Observable<object>{
-    return this.httpClient.get<object>(this.apiUrl);
+  getFourSquareResults(): Observable<Results>{
+    return this.httpClient.get<Results>(this.apiUrl);
   }
 }

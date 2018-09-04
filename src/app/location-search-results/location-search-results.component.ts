@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationSearchService } from '../services/location-search.service'
+import { Results } from '../models/results';
 
 @Component({
   selector: 'app-location-search-results',
@@ -8,7 +9,7 @@ import { LocationSearchService } from '../services/location-search.service'
 })
 export class LocationSearchResultsComponent implements OnInit {
 
-  results: object;
+  results: Results;
 
   constructor(public locationSearchService: LocationSearchService) { }
 
