@@ -1,21 +1,20 @@
-import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
 import { LocationSearchService } from '../services/location-search.service'
-import { Results } from '../models/results';
+//import { Results } from '../models/results';
 
 @Component({
   selector: 'app-location-search-results',
   templateUrl: './location-search-results.component.html',
   styleUrls: ['./location-search-results.component.css']
 })
-export class LocationSearchResultsComponent implements OnInit {
+export class LocationSearchResultsComponent implements OnChanges {
 
   @Input() searchInput: string;
-  //results: Results;
   results: object;
 
   constructor(public locationSearchService: LocationSearchService) { }
 
-  ngOnInit() {
+  ngOnChanges(){
     this.getResults();
   }
   
