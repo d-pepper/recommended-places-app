@@ -10,7 +10,8 @@ import { Results } from '../models/results';
 export class LocationSearchResultsComponent implements OnInit {
 
   @Input() searchInput: string;
-  results: Results;
+  //results: Results;
+  results: object;
 
   constructor(public locationSearchService: LocationSearchService) { }
 
