@@ -5,4 +5,6 @@
   </label>
 </div>
 
-<app-location-search-results></app-location-search-results>
+<div *ngIf="searchInputFromParent">
+  <app-location-search-results [searchInput]="searchInputFromParent"></app-location-search-results>
+</div>
